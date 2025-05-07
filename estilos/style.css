@@ -26,7 +26,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
     overflow: hidden;
     /* overflow = tudo q tiver fora da borda esconda (borda da foto tava pra fora) */
 
@@ -35,6 +34,12 @@ section#login {
     height: 525px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+
+    transform: translate(-50%,-50%);
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+    /* trasition = fazer a transição ao mudar de tamanho
+    t-t-f = trasição mais suave */
 }
 
 section#login > div#imagem {
@@ -43,10 +48,6 @@ section#login > div#imagem {
     background-size: cover;
     height: 200px;
 
-    transition: width 0.3s, height 0.3s;
-    transition-timing-function: ease;
-    /* trasition = fazer a transição ao mudar de tamanho
-    t-t-f = trasição mais suave */
 }
 
 section#login > div#formulario {
@@ -68,15 +69,42 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
-    margin: 5px 0px;
+    border-radius: 8px;
+    margin: 4px 0px;
 }
 
 form  label {
     display: none;
+}
+
+div.campo > i {
+    /* background-color: black; */
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+    
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 44px);
+    height: 98%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+
+    transform: translateY(-11.3px);
+}
+
+div.campo > input:focus-within{
+    background-color: white;
+    
 }
 
 form > input[type=submit] {

@@ -84,7 +84,7 @@ form  label {
 div.campo > i {
     /* background-color: black; */
     color: white;
-    font-size: 2em;
+    font-size: 1.9em;
     width: 40px;
     padding: 5px;
     
@@ -93,17 +93,18 @@ div.campo > i {
 div.campo > input {
     background-color: #94cfcd;
     font-size: 1em;
-    width: calc(100% - 44px);
-    height: 98%;
+    width: calc(100% - 45px);
+    height: 100%;
     border: 0px;
     border-radius: 8px;
     padding: 4px;
 
-    transform: translateY(-11.3px);
+    transform: translateY(-10px);
 }
 
 div.campo > input:focus-within{
     background-color: white;
+    outline: none;
     
 }
 
@@ -112,7 +113,7 @@ form > input[type=submit] {
     font-size: 1em;
     width: 100%;
     height: 40px;
-    background-color: #49a09d;
+    background-color: #53aaa7;
     color: white;
     border: none;
     border-radius: 5px;
